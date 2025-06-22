@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #fcdada, #f7c9d8);
+  min-height: 100vh;
+  padding: 2rem;
+  color: #4a4a4a;
+}
+
+/* Homescreen Container */
+.homescreen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+/* Widget Styles */
+.widget {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.clock {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff82ac;
+}
+
+/* Reminder list */
+.reminder ul {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.reminder li {
+  padding: 5px 0;
+  font-size: 1rem;
+}
+
+/* Quote */
+.quote p {
+  font-style: italic;
+  color: #d86b8c;
+}
+
+/* Dock (like iPad) */
+.dock {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  display: flex;
+  padding: 10px 20px;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* App Icons */
+.app-icon {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #d94b79;
+  transition: transform 0.2s ease;
+}
+
+.app-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Sections (hidden at first, scroll down or link jump) */
+.section {
+  margin: 40px auto;
+  max-width: 700px;
+  background: #fff6f9;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  color: #c8375a;
+  margin-bottom: 10px;
+}
+
+.section ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.section a {
+  color: #d94b79;
+  text-decoration: underline;
+}
+
+.section a:hover {
+  text-decoration: none;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .homescreen {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+
+  .widget {
+    width: 90%;
+  }
+
+  .dock {
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .section {
+    width: 90%;
+    padding: 20px;
+  }
+}
